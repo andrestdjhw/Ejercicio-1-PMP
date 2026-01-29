@@ -75,12 +75,15 @@ public class FrmEjercicio1 extends javax.swing.JFrame {
 
         btnrestar.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
         btnrestar.setText("-");
+        btnrestar.addActionListener(this::btnrestarActionPerformed);
 
         btnproducto.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
         btnproducto.setText("*");
+        btnproducto.addActionListener(this::btnproductoActionPerformed);
 
         btndivision.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
         btndivision.setText("/");
+        btndivision.addActionListener(this::btndivisionActionPerformed);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -175,6 +178,39 @@ public class FrmEjercicio1 extends javax.swing.JFrame {
         txtResultado.setText(String.valueOf(operar.resultado));
         
     }//GEN-LAST:event_btnsumarActionPerformed
+
+    private void btnrestarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnrestarActionPerformed
+        
+        double num1 = Double.parseDouble(txtnumero1.getText());
+        
+        double num2 = Double.parseDouble(txtnumero2.getText());
+        
+        operar.restar(num1, num2);
+        
+        txtResultado.setText(String.valueOf(operar.resultado));
+    }//GEN-LAST:event_btnrestarActionPerformed
+
+    private void btnproductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnproductoActionPerformed
+        
+        double num1 = Double.parseDouble(txtnumero1.getText());
+        
+        double num2 = Double.parseDouble(txtnumero2.getText());
+        
+        operar.multiplicar(num1, num2);
+        
+        txtResultado.setText(String.valueOf(operar.resultado));
+    }//GEN-LAST:event_btnproductoActionPerformed
+
+    private void btndivisionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btndivisionActionPerformed
+        
+        double num1 = Double.parseDouble(txtnumero1.getText());
+        
+        double num2 = Double.parseDouble(txtnumero2.getText());
+        
+        operar.dividir(num1, num2);
+        
+        txtResultado.setText(String.valueOf(operar.resultado));
+    }//GEN-LAST:event_btndivisionActionPerformed
 
     /**
      * @param args the command line arguments

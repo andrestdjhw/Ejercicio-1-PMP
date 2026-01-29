@@ -189,6 +189,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="-"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnrestarActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnproducto">
           <Properties>
@@ -197,6 +200,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="*"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnproductoActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btndivision">
           <Properties>
@@ -205,6 +211,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="/"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btndivisionActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

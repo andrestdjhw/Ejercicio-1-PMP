@@ -15,4 +15,20 @@ public class operaciones {
     {
         resultado = n1 + n2;
     }
+    
+    public void restar(double n1, double n2)
+    {
+        resultado = n1 - n2;
+    }
+    
+    public void multiplicar(double n1, double n2)
+    {
+        resultado = n1 * n2;
+    }
+    
+    public void dividir(double n1, double n2)
+    {
+        resultado = n1 / n2;
+    }
 }
+//activa modo power ranger 
