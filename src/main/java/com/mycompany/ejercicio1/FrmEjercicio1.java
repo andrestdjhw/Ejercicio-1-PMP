@@ -9,6 +9,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Image;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 /**
@@ -27,6 +28,7 @@ public class FrmEjercicio1 extends javax.swing.JFrame {
      */
     public FrmEjercicio1() {
         initComponents();
+        txtResultado.setEnabled(false);
         this.getContentPane().setBackground(Color.darkGray);//Cambiar color de fondo
         this.setLocationRelativeTo(null);//Centrar Formulario
     }
@@ -169,6 +171,20 @@ public class FrmEjercicio1 extends javax.swing.JFrame {
 
     private void btnsumarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsumarActionPerformed
         
+        if(txtnumero1.getText().trim().isEmpty())
+        {
+            JOptionPane.showMessageDialog(this, "Ingrese un numero", "Campo es requerido", JOptionPane.WARNING_MESSAGE);
+            
+            txtnumero1.requestFocus();
+        }
+        
+        if(txtnumero2.getText().trim().isEmpty())
+        {
+            JOptionPane.showMessageDialog(this, "Ingrese un numero", "Campo es requerido", JOptionPane.WARNING_MESSAGE);
+            
+            txtnumero2.requestFocus();
+        }
+        
         double num1 = Double.parseDouble(txtnumero1.getText());
         
         double num2 = Double.parseDouble(txtnumero2.getText());
@@ -177,9 +193,25 @@ public class FrmEjercicio1 extends javax.swing.JFrame {
         
         txtResultado.setText(String.valueOf(operar.resultado));
         
+        txtnumero1.setText("");
+        txtnumero2.setText("");
+        
+        
     }//GEN-LAST:event_btnsumarActionPerformed
 
     private void btnrestarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnrestarActionPerformed
+        
+        if(txtnumero1.getText().trim().isEmpty())
+        {
+            JOptionPane.showMessageDialog(this, "Ingrese un numero", "Campo es requerido", JOptionPane.WARNING_MESSAGE);
+            txtnumero1.requestFocus();
+        }
+        
+        if(txtnumero2.getText().trim().isEmpty())
+        {
+            JOptionPane.showMessageDialog(this, "Ingrese un numero", "Campo es requerido", JOptionPane.WARNING_MESSAGE);
+            txtnumero1.requestFocus();
+        }
         
         double num1 = Double.parseDouble(txtnumero1.getText());
         
@@ -188,9 +220,24 @@ public class FrmEjercicio1 extends javax.swing.JFrame {
         operar.restar(num1, num2);
         
         txtResultado.setText(String.valueOf(operar.resultado));
+        
+        txtnumero1.setText("");
+        txtnumero2.setText("");
     }//GEN-LAST:event_btnrestarActionPerformed
 
     private void btnproductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnproductoActionPerformed
+        
+        if(txtnumero1.getText().trim().isEmpty())
+        {
+            JOptionPane.showMessageDialog(this, "Ingrese un numero", "Campo es requerido", JOptionPane.WARNING_MESSAGE);
+            txtnumero1.requestFocus();
+        }
+        
+        if(txtnumero2.getText().trim().isEmpty())
+        {
+            JOptionPane.showMessageDialog(this, "Ingrese un numero", "Campo es requerido", JOptionPane.WARNING_MESSAGE);
+            txtnumero1.requestFocus();
+        }
         
         double num1 = Double.parseDouble(txtnumero1.getText());
         
@@ -199,9 +246,24 @@ public class FrmEjercicio1 extends javax.swing.JFrame {
         operar.multiplicar(num1, num2);
         
         txtResultado.setText(String.valueOf(operar.resultado));
+        
+        txtnumero1.setText("");
+        txtnumero2.setText("");
     }//GEN-LAST:event_btnproductoActionPerformed
 
     private void btndivisionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btndivisionActionPerformed
+        
+        if(txtnumero1.getText().trim().isEmpty())
+        {
+            JOptionPane.showMessageDialog(this, "Ingrese un numero", "Campo es requerido", JOptionPane.WARNING_MESSAGE);
+            txtnumero1.requestFocus();
+        }
+        
+        if(txtnumero2.getText().trim().isEmpty())
+        {
+            JOptionPane.showMessageDialog(this, "Ingrese un numero", "Campo es requerido", JOptionPane.WARNING_MESSAGE);
+            txtnumero1.requestFocus();
+        } 
         
         double num1 = Double.parseDouble(txtnumero1.getText());
         
@@ -210,6 +272,9 @@ public class FrmEjercicio1 extends javax.swing.JFrame {
         operar.dividir(num1, num2);
         
         txtResultado.setText(String.valueOf(operar.resultado));
+        
+        txtnumero1.setText("");
+        txtnumero2.setText("");
     }//GEN-LAST:event_btndivisionActionPerformed
 
     /**
